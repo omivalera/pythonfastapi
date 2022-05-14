@@ -38,7 +38,7 @@ def shutdown():
 @app.get('/product/{product_name}')
 def get_product(product_name):
     print('=============================')
-    product = Product.select().where(Product.name == product_name)
+    product = Product.select().where(Product.id == product_name).first()
     if product:
         return ProductResponseModel(
             id = product.id,
@@ -51,6 +51,7 @@ def get_product(product_name):
     else:
         return HTTPException(404, 'No se encuentra el producto')
    
+
 
 
 # @app.get('/posts')

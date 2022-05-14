@@ -16,10 +16,10 @@ from peewee import *
 
 
 database = MySQLDatabase(
-    'omicida',
-    user='root',
-    password='root',
-    host='localhost',
+    'bsale_test',
+    user='bsale_test',
+    password='bsale_test',
+    host='mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
     port=3306
 )
 
